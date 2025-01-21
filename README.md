@@ -15,7 +15,7 @@ All projects are contained in its own directory inside the [projects](projects) 
 6. [ ] Static Site Server
 7. [ ] Basic DNS Setup
 8. [ ] Simple Monitoring
-9. [ ] Dummy Systemd Service
+9. [x] [Dummy Systemd Service](projects/dummy-systemd-service)
 10. [ ] Basic Dockerfile
 11. [ ] EC2 Instance
 

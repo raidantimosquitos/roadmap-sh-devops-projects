@@ -1,0 +1,13 @@
+[Unit]
+Description=Dummy Service
+After=network.target
+
+[Service]
+ExecStart=/home/lucash/dev-ops-roadmap/projects/dummy-systemd-service/dummy.sh
+Restart=always
+StandardOutput=append:/var/log/dummy-service.log
+StandardError=append:/var/log/dummy-service.log
+
+[Install]
+WantedBy=multi-user.target
+

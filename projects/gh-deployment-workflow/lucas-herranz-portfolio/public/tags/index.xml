@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Lucas Herranz Gancedo</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Lucas Herranz Gancedo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Jan 2025 22:52:04 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello-World</title>
+      <link>http://localhost:1313/tags/hello-world/</link>
+      <pubDate>Sun, 19 Jan 2025 22:52:04 +0100</pubDate>
+      <guid>http://localhost:1313/tags/hello-world/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>4G</title>
+      <link>http://localhost:1313/tags/4g/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/4g/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>5G</title>
+      <link>http://localhost:1313/tags/5g/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/5g/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cloud</title>
+      <link>http://localhost:1313/tags/cloud/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Communications</title>
+      <link>http://localhost:1313/tags/communications/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/communications/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NFV</title>
+      <link>http://localhost:1313/tags/nfv/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/nfv/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAN</title>
+      <link>http://localhost:1313/tags/ran/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/ran/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SDN</title>
+      <link>http://localhost:1313/tags/sdn/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/sdn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wireless</title>
+      <link>http://localhost:1313/tags/wireless/</link>
+      <pubDate>Sun, 19 Jan 2025 15:12:50 +0100</pubDate>
+      <guid>http://localhost:1313/tags/wireless/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://localhost:1313/tags/blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/blog/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

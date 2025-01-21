@@ -1,0 +1,63 @@
+baseURL = 'https://raidantimosquitos.github.io/'
+languageCode = 'en-us'
+title = 'Lucas Herranz Gancedo'
+theme = 'typo'
+
+[taxonomies]
+    tags = 'tags'
+
+[params]
+    display_related = true
+
+    # Meta description
+    description = "A wireless-RAN engineer's portfolio"
+
+    # Appearance settings
+    theme = 'auto'
+    colorPalette = 'default'
+    hideHeader = false
+
+    # Breadcrumbs
+    breadcrumbs = true
+    showFooter = true
+
+    # Social Icons
+    [[params.social]]
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/lucas-herranz"
+
+    [[params.social]]
+        name = "github"
+        url = "https://github.com/raidantimosquitos"
+
+    [[params.social]]
+        name = "gmail"
+        url = "mailto:lucashg97@hotmail.com"
+
+    # Main menu pages
+    [[params.menu]]
+        name = "home"
+        url = "/"
+
+    [[params.menu]]
+        name = "blog"
+        url = "/blog"
+
+# Syntax highlight on code blocks
+[markup]
+    [markup.highlight]
+        style = 'algol'
+
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+# Giscus comments
+[params.giscus]
+    enable = false
+    repo = "user/repo"
+    repoid = "repoId"
+    category = "General"
+    categoryid = "categoryId"
+    mapping = "pathname"
+    theme = "preferred_color_scheme"

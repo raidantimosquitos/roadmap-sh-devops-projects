@@ -12,11 +12,6 @@ You can run this script on any Linux/Unix device. It assumes that you have the `
 In my case I am running on a `Ubuntu 20.04` system.
 
 ## Usage
-First clone the repository into a directory of your choice.
-```bash
-git clone https://github.com/raidantimosquitos/nginx-log-analyzer.git
-```
-
 To run this project, use the following command:
 ```bash
 bash nginx-log-analyzer
