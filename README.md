@@ -7,15 +7,15 @@ All projects are contained in its own directory inside the [projects](projects) 
 
 ## Table of contents
 ### Beginner projects
-1. [x] [Server Performance Stats](projects/server-performance-status)
-2. [x] [Log Archive Tool](projects/log-archive-tool)
-3. [x] [Nginx Log Analyzer](projects/nginx-log-analyzer)
+1. [x] [Server Performance Stats](projects/server-performance-status) - :memo: [roadmap.sh](https://roadmap.sh/projects/server-stats)
+2. [x] [Log Archive Tool](projects/log-archive-tool) - :memo: [roadmap.sh](https://roadmap.sh/projects/log-archive-tool)
+3. [x] [Nginx Log Analyzer](projects/nginx-log-analyzer) - :memo: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser)
 4. [ ] Github Pages Deployment
 5. [ ] SSH Remote Server Setup
 6. [ ] Static Site Server
 7. [ ] Basic DNS Setup
 8. [ ] Simple Monitoring
-9. [x] [Dummy Systemd Service](projects/dummy-systemd-service)
+9. [x] [Dummy Systemd Service](projects/dummy-systemd-service) - :memo: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service)
 10. [ ] Basic Dockerfile
 11. [ ] EC2 Instance
 
