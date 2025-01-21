@@ -1,1 +1,4 @@
 
+[submodule "projects/gh-deployment-workflow/lucas-herranz-portfolio/themes/typo"]
+	path = projects/gh-deployment-workflow/lucas-herranz-portfolio/themes/typo
+	url = https://github.com/tomfran/typo.git
