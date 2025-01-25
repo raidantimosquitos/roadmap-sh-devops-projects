@@ -16,7 +16,7 @@ All projects are contained in its own directory inside the [projects](projects) 
 7. [ ] Basic DNS Setup
 8. [ ] Simple Monitoring
 9. [x] [Dummy Systemd Service](projects/dummy-systemd-service) - :memo: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service)
-10. [ ] Basic Dockerfile
+10. [x] [Basic Dockerfile](projects/basic-dockerfile) - :memo: [roadmap.sh](https://roadmap.sh/projects/basic-dockerfile)
 11. [ ] EC2 Instance
 
 ### Intermediate projects
