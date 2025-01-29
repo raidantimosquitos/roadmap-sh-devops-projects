@@ -7,16 +7,16 @@ All projects are contained in its own directory inside the [projects](projects) 
 
 ## Table of contents
 ### Beginner projects
-1. [x] [Server Performance Stats](projects/server-performance-status) | :link: [roadmap.sh](https://roadmap.sh/projects/server-stats)
-2. [x] [Log Archive Tool](projects/log-archive-tool) | :link: [roadmap.sh](https://roadmap.sh/projects/log-archive-tool)
-3. [x] [Nginx Log Analyzer](projects/nginx-log-analyzer) | :link: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser)
+1. [x] [Server Performance Stats](projects/beginner/server-performance-status) | :link: [roadmap.sh](https://roadmap.sh/projects/server-stats)
+2. [x] [Log Archive Tool](projects/beginner/log-archive-tool) | :link: [roadmap.sh](https://roadmap.sh/projects/log-archive-tool)
+3. [x] [Nginx Log Analyzer](projects/beginner/nginx-log-analyzer) | :link: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser)
 4. [ ] Github Pages Deployment
-5. [x] [SSH Remote Server Setup](projects/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup)
+5. [x] [SSH Remote Server Setup](projects/beginner/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup)
 6. [ ] Static Site Server
 7. [ ] Basic DNS Setup
 8. [ ] Simple Monitoring
-9. [x] [Dummy Systemd Service](projects/dummy-systemd-service) | :link: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service)
-10. [x] [Basic Dockerfile](projects/basic-dockerfile) | :link: [roadmap.sh](https://roadmap.sh/projects/basic-dockerfile)
+9. [x] [Dummy Systemd Service](projects/beginner/dummy-systemd-service) | :link: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service)
+10. [x] [Basic Dockerfile](projects/beginner/basic-dockerfile) | :link: [roadmap.sh](https://roadmap.sh/projects/basic-dockerfile)
 11. [ ] EC2 Instance
 
 ### Intermediate projects
