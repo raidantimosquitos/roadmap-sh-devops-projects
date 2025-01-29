@@ -36,5 +36,5 @@ chmod 700 ~/.ssh
 Lastly, you can create a `~/.ssh/config` file in your computer (client) to connect to the server more easily by creating an alias for the server. This repository contains a template of the `~/.ssh/config` which you can use.
 ```bash
 nano ~/.ssh/config   # to create the file
-ssh alias
+ssh alias-server     # to connect to the server
 ```
