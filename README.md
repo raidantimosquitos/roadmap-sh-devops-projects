@@ -12,7 +12,7 @@ All projects are contained in its own directory inside the [projects](projects) 
 3. [x] [Nginx Log Analyzer](projects/beginner/nginx-log-analyzer) | :link: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser)
 4. [ ] Github Pages Deployment
 5. [x] [SSH Remote Server Setup](projects/beginner/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup)
-6. [ ] Static Site Server
+6. [x] [Static Site Server](projects/beginner/static-site-server) | :link: [roadmap.sh](https://roadmap.sh/projects/static-site-server)
 7. [ ] Basic DNS Setup
 8. [ ] Simple Monitoring
 9. [x] [Dummy Systemd Service](projects/beginner/dummy-systemd-service) | :link: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service)

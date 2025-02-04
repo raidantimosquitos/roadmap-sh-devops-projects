@@ -5,9 +5,10 @@ Setting up remote Linux server as a DigitalOcean Droplet and configuring it to a
 ## Table of contents
 - [Requirements](#Requirements)
 - [Usage](#Usage)
+- [Recommendations](#Recommendations)
 
 ## Requirements
-The following code assumes that you are using a Ubuntu/Debian device and anyserver (a proprietary one of yours, or a public cloud server). In my case I created a [DigitalOcean Droplet](https://www.digitalocean.com/products/droplets) since at the time of writing this you get a 200$ free credit for 2 months when signing up.
+The following code assumes that you are using a Ubuntu/Debian device and any server (a proprietary one of yours, or a public cloud server). In my case I created a [DigitalOcean Droplet](https://www.digitalocean.com/products/droplets) since at the time of writing this you get a 200$ free credit for 2 months when signing up.
 
 ## Usage
 Once you have a server running and connectivity to it from your device (client), if you do not have SSH keys, you should first you must generate SSH keys for it. The next command will do so:
@@ -25,7 +26,14 @@ Next, it is time to configure establish SSH connectivity to the server. To do so
 ssh -i <path-to-private-key> user@server-ip
 ```
 
-After running the above code, you should be prompted for the login credentials. If you created a DigitalOcean Droplet you should receive those credentials in the email. Once logged in to the server, you must add the public SSH key of the client to the `~/.ssh/authorized_keys` file, to do execute the next code:
+After running the above code, you should be prompted for the login credentials. If you created a Digital Ocean Droplet you should receive those credentials (this is generally the root user) in the email. Once root-logged into the server, first you must create a user other than root. To do so, follow the next commands:
+```bash
+sudo adduser newuser  # you'll be prompted to set a password and user details (optional)
+sudo usermod -aG sudo newuser  # grant sudo privileges to the new user.
+su - newuser  # switch to the new user
+```
+
+Then, you must add the public SSH key of the client to the `~/.ssh/authorized_keys` file, to do execute the next code:
 ```bash
 mkdir -p ~/.ssh
 echo "<your-public-key>" >> ~/.ssh/authorized_keys
