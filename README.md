@@ -7,27 +7,27 @@ All projects are contained in its own directory inside the [projects](projects) 
 
 ## Table of contents
 ### Beginner projects
-1. [x] [Server Performance Stats](projects/beginner/server-performance-status) | :link: [roadmap.sh](https://roadmap.sh/projects/server-stats)
-2. [x] [Log Archive Tool](projects/beginner/log-archive-tool) | :link: [roadmap.sh](https://roadmap.sh/projects/log-archive-tool)
-3. [x] [Nginx Log Analyzer](projects/beginner/nginx-log-analyzer) | :link: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser)
-4. [ ] Github Pages Deployment
-5. [x] [SSH Remote Server Setup](projects/beginner/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup)
-6. [x] [Static Site Server](projects/beginner/static-site-server) | :link: [roadmap.sh](https://roadmap.sh/projects/static-site-server)
-7. [ ] Basic DNS Setup
-8. [ ] Simple Monitoring
-9. [x] [Dummy Systemd Service](projects/beginner/dummy-systemd-service) | :link: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service)
-10. [x] [Basic Dockerfile](projects/beginner/basic-dockerfile) | :link: [roadmap.sh](https://roadmap.sh/projects/basic-dockerfile)
-11. [ ] EC2 Instance
+1. [x] [Server Performance Stats](projects/beginner/server-performance-status) | :link: [roadmap.sh](https://roadmap.sh/projects/server-stats) | *CLI*
+2. [x] [Log Archive Tool](projects/beginner/log-archive-tool) | :link: [roadmap.sh](https://roadmap.sh/projects/log-archive-tool) | *CLI*
+3. [x] [Nginx Log Analyzer](projects/beginner/nginx-log-analyzer) | :link: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser) | *CLI*
+4. [ ] Github Pages Deployment | :link: roadmap.sh | *CI/CD*
+5. [x] [SSH Remote Server Setup](projects/beginner/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup) | *SSH*
+6. [x] [Static Site Server](projects/beginner/static-site-server) | :link: [roadmap.sh](https://roadmap.sh/projects/static-site-server) | *Nginx*
+7. [ ] Basic DNS Setup | :link: roadmap.sh | *DNS*
+8. [ ] Simple Monitoring | :link: roadmap.sh | *Monitoring*
+9. [x] [Dummy Systemd Service](projects/beginner/dummy-systemd-service) | :link: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service) | *Systemd*
+10. [x] [Basic Dockerfile](projects/beginner/basic-dockerfile) | :link: [roadmap.sh](https://roadmap.sh/projects/basic-dockerfile) | *Docker*
+11. [ ] EC2 Instance | :link: roadmap.sh | *AWS*
 
 ### Intermediate projects
-1. [ ] Configuration Management (Ansible)
-2. [ ] IaC on DigitalOcean (Terraform)
-3. [ ] Node.js Service Deployment (CI/CD)
-4. [ ] Dockerized Service
-5. [ ] Multi-Container Application (Docker Compose)
-6. [ ] Automated DB Backups
-7. [ ] Bastion Host
-8. [ ] File Integrity Checker
+1. [ ] Configuration Management | :link: roadmap.sh | *Ansible*
+2. [ ] IaC on DigitalOcean | :link: roadmap.sh | *Terraform*
+3. [ ] Node.js Service Deployment | :link: roadmap.sh | *CI/CD*
+4. [ ] Dockerized Service | :link: roadmap.sh | *Docker*
+5. [ ] Multi-Container Application | :link: roadmap.sh | *Docker Compose*
+6. [ ] Automated DB Backups | :link: roadmap.sh | *Backups*
+7. [ ] Bastion Host | :link: roadmap.sh | *Networking*
+8. [ ] File Integrity Checker | :link: roadmap.sh | *Security*
 
 ### Advanced projects
 1. [ ] Blue-Green Deployment
