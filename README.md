@@ -10,7 +10,7 @@ All projects are contained in its own directory inside the [projects](projects) 
 1. [x] [Server Performance Stats](projects/beginner/server-performance-status) | :link: [roadmap.sh](https://roadmap.sh/projects/server-stats) | *CLI*
 2. [x] [Log Archive Tool](projects/beginner/log-archive-tool) | :link: [roadmap.sh](https://roadmap.sh/projects/log-archive-tool) | *CLI*
 3. [x] [Nginx Log Analyzer](projects/beginner/nginx-log-analyzer) | :link: [roadmap.sh](https://roadmap.sh/projects/nginx-log-analyser) | *CLI*
-4. [ ] Github Pages Deployment | :link: roadmap.sh | *CI/CD*
+4. [x] [Github Pages Deployment](projects/beginner/gh-deployment-workflow) | :link: [roadmap.sh](https://roadmap.sh/projects/github-actions-deployment-workflow) | *CI/CD*
 5. [x] [SSH Remote Server Setup](projects/beginner/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup) | *SSH*
 6. [x] [Static Site Server](projects/beginner/static-site-server) | :link: [roadmap.sh](https://roadmap.sh/projects/static-site-server) | *Nginx*
 7. [ ] Basic DNS Setup | :link: roadmap.sh | *DNS*

@@ -3,7 +3,7 @@
 Write a simple GitHub Actions workflow to deploy a static website to GitHub Pages. This is my implementation of [roadmap.sh](https://roadmap.sh/projects/github-actions-deployment-workflow).
 
 
-You can access the GitHub pages in the following link: [https://raidantimosquitos.github.io/github-actions-deployment-workflow](https://raidantimosquitos.github.io/github-actions-deployment-workflow])
+You can access the GitHub pages in the following link: [https://raidantimosquitos.github.io/roadmap-sh-devops-projects/hello-github-actions/](https://raidantimosquitos.github.io/roadmap-sh-devops-projects/hello-github-actions/)
 
 
 ## Table of contents
