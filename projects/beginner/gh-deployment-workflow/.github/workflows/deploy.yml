@@ -20,9 +20,18 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+
+          git fetch origin gh-deployment-workflow || echo "gh-deployment-workflow branch does not exist"
+
+
           git checkout gh-deployment-workflow || git checkout --orphan gh-deployment-workflow
+
+
           git rm -rf .
           cp -r projects/beginner/gh-deployment-workflow/hello-github-actions/* .
+
+          date > .timestamp
+
           git add .
           git commit -m "Deploy Hello GitHub Actions"
           git push --force origin gh-deployment-workflow
