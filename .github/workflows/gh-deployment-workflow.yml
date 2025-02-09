@@ -30,7 +30,7 @@ jobs:
 
       - name: Clear branch, check if download directory exists and create if needed
         run: |
-          rm -rf .
+          git rm -rf .
           DIR="hello-github-actions"
           if [ ! -d "$DIR" ]; then
             echo "Directory does not exist. Creating $DIR..."
