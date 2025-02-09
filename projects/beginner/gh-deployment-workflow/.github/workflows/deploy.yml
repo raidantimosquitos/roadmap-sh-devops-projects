@@ -1,24 +1,52 @@
-name: Deploy a static website to GitHub Pages (Separate Branch)
+name: Deploy to GitHub Pages from gh-deployment-workflow branch
 
 on:
   push:
     branches:
-      - main  # Trigger on pushes to main branch
-
-permissions:
-  contents: write  # Required to push to another branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout main branch
         uses: actions/checkout@v4
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Setup Git config
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Build static website
+        run: |
+          # For this example, let's assume you're using a simple HTML file
+          # If you have a build process, run it here
+          # For example:
+          # npm run build
+          # or
+          # yarn build
+          # But for a simple HTML file, no build process is needed
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./projects/beginner/gh-deployment-workflow/hello-github-actions/
-            publish_branch: gh-deployment-workflow
+          name: hello-github-actions
+          path: ./projects/beginner/gh-deployment-workflow/hello-github-actions
+
+      - name: Checkout gh-deployment-workflow
+        uses: actions/checkout@v4
+        with:
+          branch: gh-deployment-workflow
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hello-github-actions
+          path: .
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
+          git push origin gh-deployment-workflow
+
