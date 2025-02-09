@@ -1,0 +1,53 @@
+name: Deploy to GitHub Pages from gh-deployment-workflow branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+
+      - name: Setup Git config
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: hello-github-actions
+          path: ${{ github.workspace }}/projects/beginner/gh-deployment-workflow/hello-github-actions
+
+      - name: Checkout gh-deployment-workflow
+        uses: actions/checkout@v4
+        with:
+          ref: gh-deployment-workflow
+
+      - name: Clear branch, check if download directory exists and create if needed
+        run: |
+          git rm -rf .
+          DIR="hello-github-actions"
+          if [ ! -d "$DIR" ]; then
+            echo "Directory does not exist. Creating $DIR..."
+            mkdir -p "$DIR"
+          else
+            echo "Directory exists. Downloading into $DIR..."
+          fi
+
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hello-github-actions
+          path: hello-github-actions
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git commit -m "Deploy to GitHub Pages" || echo "No changes to commit"
+          git push origin gh-deployment-workflow
+
