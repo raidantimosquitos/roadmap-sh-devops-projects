@@ -31,12 +31,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: hello-github-actions
-          path: /projects/beginner/gh-deployment-workflow/hello-github-actions
+          path: /projects/beginner/gh-deployment-workflow/hello-github-actions/
 
       - name: Checkout gh-deployment-workflow
         uses: actions/checkout@v4
         with:
-          branch: gh-deployment-workflow
+          ref: gh-deployment-workflow
 
       - name: Download artifact
         uses: actions/download-artifact@v4
