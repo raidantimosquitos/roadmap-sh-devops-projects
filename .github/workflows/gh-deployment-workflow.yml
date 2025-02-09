@@ -17,16 +17,6 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Build static website
-        run: |
-          # For this example, let's assume you're using a simple HTML file
-          # If you have a build process, run it here
-          # For example:
-          # npm run build
-          # or
-          # yarn build
-          # But for a simple HTML file, no build process is needed
-
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -38,8 +28,9 @@ jobs:
         with:
           ref: gh-deployment-workflow
 
-      - name: Check if download directory exists and create if needed
+      - name: Clear branch, check if download directory exists and create if needed
         run: |
+          rm -rf .
           DIR="hello-github-actions"
           if [ ! -d "$DIR" ]; then
             echo "Directory does not exist. Creating $DIR..."
