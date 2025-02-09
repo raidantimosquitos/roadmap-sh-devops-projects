@@ -38,11 +38,21 @@ jobs:
         with:
           ref: gh-deployment-workflow
 
+      - name: Check if download directory exists and create if needed
+        run: |
+          DIR="hello-github-actions"
+          if [ ! -d "$DIR" ]; then
+            echo "Directory does not exist. Creating $DIR..."
+            mkdir -p "$DIR"
+          else
+            echo "Directory exists. Downloading into $DIR..."
+          fi
+
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: hello-github-actions
-          path: .
+          path: hello-github-actions
 
       - name: Commit and push changes
         run: |
