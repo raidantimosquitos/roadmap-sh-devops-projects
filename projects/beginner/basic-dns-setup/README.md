@@ -137,8 +137,8 @@ To still use GitHub Pages to serve the static website, we can host it in a subdo
 Please find both static websites in the following links:
 | Server                | Link  |
 |-----------------------|-------|
-| GitHub Pages          | [gh.testsraidantimosquitos.win/hello-github-actions](gh.testsraidantimosquitos.win/hello-github-actions)  |
-| DigitalOcean Droplet  | [testsraidatimosquitos.win](testsraidantimosquitos.win) or [www.testsraidantimosquitos.win](www.testsraidantimosquitos.win)  |
+| GitHub Pages          | [gh.testsraidantimosquitos.win/hello-github-actions](https://gh.testsraidantimosquitos.win/hello-github-actions)  |
+| DigitalOcean Droplet  | [testsraidatimosquitos.win](https://testsraidantimosquitos.win) or [www.testsraidantimosquitos.win](https://www.testsraidantimosquitos.win)  |
 
 Screenshots of the website content:
 ![GitHub Pages static website](img/gh-static-site.png)
