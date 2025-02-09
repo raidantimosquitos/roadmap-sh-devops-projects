@@ -13,7 +13,7 @@ All projects are contained in its own directory inside the [projects](projects) 
 4. [x] [Github Pages Deployment](projects/beginner/gh-deployment-workflow) | :link: [roadmap.sh](https://roadmap.sh/projects/github-actions-deployment-workflow) | *CI/CD*
 5. [x] [SSH Remote Server Setup](projects/beginner/ssh-remote-server-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/ssh-remote-server-setup) | *SSH*
 6. [x] [Static Site Server](projects/beginner/static-site-server) | :link: [roadmap.sh](https://roadmap.sh/projects/static-site-server) | *Nginx*
-7. [ ] Basic DNS Setup | :link: roadmap.sh | *DNS*
+7. [x] [Basic DNS Setup](projects/beginner/basic-dns-setup) | :link: [roadmap.sh](https://roadmap.sh/projects/basic-dns) | *DNS*
 8. [ ] Simple Monitoring | :link: roadmap.sh | *Monitoring*
 9. [x] [Dummy Systemd Service](projects/beginner/dummy-systemd-service) | :link: [roadmap.sh](https://roadmap.sh/projects/dummy-systemd-service) | *Systemd*
 10. [x] [Basic Dockerfile](projects/beginner/basic-dockerfile) | :link: [roadmap.sh](https://roadmap.sh/projects/basic-dockerfile) | *Docker*
