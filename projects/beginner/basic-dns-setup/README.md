@@ -109,7 +109,7 @@ This is only required if you want to use `www.yourdomainname.com` (not only `you
     - Proxy Status: `Proxied` (Orange cloud :cloud:).
 
 ### Step 4: Remove the custom domain from GitHub Pages
-1. Go to the GitHub repository, **Settings** &larr; **Pages**.
+1. Go to the GitHub repository, **Settings** &rarr; **Pages**.
 2. Delete the custom domain (`yourdomainname.com`).
 3. Disable GitHub Pages (if you do not longer need it).
 
@@ -120,8 +120,8 @@ This is only required if you want to use `www.yourdomainname.com` (not only `you
 
 ### ALTERNATIVE: Use a subdomain for GitHub pages
 To still use GitHub Pages to serve the static website, we can host it in a subdomain. For example:
-- **Main website** (`yourdomainname.com`) &larr; Hosted on DigitalOcean Droplet.
-- **Subdomain** (`gh.yourdomainname.com`) &larr; Hosted on GitHub Pages.
+- **Main website** (`yourdomainname.com`) &rarr; Hosted on DigitalOcean Droplet.
+- **Subdomain** (`gh.yourdomainname.com`) &rarr; Hosted on GitHub Pages.
 
 #### Steps to setup a subdomain in Cloudflare
 1. In Cloudflare, add a new DNS record:
@@ -174,8 +174,8 @@ Let's say a user visits `https://yourdomainname.com`in their browser, here is wh
 
 #### :four: Cloudflare's DNS Server Responds
 - Since I have set up Cloudflare's DNS, this is my DNS host. Cloudflare's DNS servers check the **A records** and **CNAME records** we set up earlier:
-    - **A records** &larr; Map `yourdomainname.com` to **GitHub pages IPs** (`185.199.108.153`, etc.").
-    - **CNAME record** &larr; Maps `www.yourdomainname.com` to `raidantimosquitos.github.io`.
+    - **A records** &rarr; Map `yourdomainname.com` to **GitHub pages IPs** (`185.199.108.153`, etc.").
+    - **CNAME record** &rarr; Maps `www.yourdomainname.com` to `raidantimosquitos.github.io`.
 - The DNS resolver gets the correct IP address from Cloudflare's DNS.
 
 #### :five: Browser connects to GitHub pages
@@ -206,8 +206,8 @@ When **DNS records are changed**, it can take anywhere from **a few minutes to 2
 
 #### Monitoring with DNSChecker
 Using [dnschecker.org](https://dnschecker.org) enables administrators to see if the new DNS records have propagated globally.
-    - When seeing **mixed results (some old IPs, some new)** &larr; DNS Propagation is still in progress.
-    - If all DNS servers return the **new IP address** &larr; DNS Propagation is complete.
+    - When seeing **mixed results (some old IPs, some new)** &rarr; DNS Propagation is still in progress.
+    - If all DNS servers return the **new IP address** &rarr; DNS Propagation is complete.
 
 
 ### What role does the Content Delivery Network (CDN) play as a proxy in Cloudflare DNS?
