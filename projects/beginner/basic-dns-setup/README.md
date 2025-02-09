@@ -9,12 +9,12 @@ The goal of this project is to learn and practice the basics of DNS. This is my 
 4. [Links to static websites](#links-to-static-websites)
 5. [Brief concepts about DNS](#brief-concepts-about-dns)
 
-## 1. Requirements
+## Requirements
 This project assumes that you already completed the previous two projects: [GitHub Pages Deployment](../gh-deployment-workflow) and [Static Site Server](../static-site-server).
 
 If that is not the case please complete those earlier. It is also a requirement to have a domain name, you can purchase one in Cloudflare, GoDaddy, Namecheap, etc. This tutorial will guide you through the steps to configure in Cloudflare, but GUI are considerably similar so you should be able to follow if using a different domain provider.
 
-## 2. Custom Domain for GitHub Pages
+## Custom Domain for GitHub Pages
 ### **Step 1**: Add your domain to GitHub pages
 1. Go to your GitHub repository.
 2. Navigate to **Settings** > **Pages**. ![GitHub Pages Settings view](img/GitHubSettings.png)
@@ -34,12 +34,14 @@ If that is not the case please complete those earlier. It is also a requirement 
     - **Proxy Status**: set to "**DNS Only**" (:warning:**NOT Proxied**).
     - Click on "**Save**".
     - Repeat this process for the other three IP addresses in the following table, which represents GitHub server's IP addresses that host your static site. These are the official GitHub Pages IPs.
-    | Type  | Name  | IPv4 Address       |
-    |-------|-------|--------------------|
-    | A     | @     | `185.199.108.153`  |
-    | A     | @     | `185.199.109.153`  |
-    | A     | @     | `185.199.110.153`  |
-    | A     | @     | `185.199.111.153`  |
+
+| Type  | Name  | IPv4 Address       |
+|-------|-------|--------------------|
+| A     | @     | `185.199.108.153`  |
+| A     | @     | `185.199.109.153`  |
+| A     | @     | `185.199.110.153`  |
+| A     | @     | `185.199.111.153`  |
+
 5. Add CNAME record (for `yourdomainname.com`). Steps:
     - Click "**Add record**".
     - Set **Type** to `CNAME`.
@@ -47,9 +49,11 @@ If that is not the case please complete those earlier. It is also a requirement 
     - In **Target**, enter `your-username.github.io` (replace `your-username` with your actual GitHub username)
     - **Proxy Status**: set to "**DNS Only**" (:warning:**NOT Proxied**).
     - Click "**Save**".
-    | Type  | Name  | Target (Value)             |
-    |-------|-------|----------------------------|
-    | CNAME | www   | `your-username.github.io`  |
+
+| Type  | Name  | Target (Value)             |
+|-------|-------|----------------------------|
+| CNAME | www   | `your-username.github.io`  |
+
 ![Fields to fill to add DNS record in Cloudflare](img/CloudFlareAddRecordFields.png)
 
 ### Step 3: Disable Cloudflare Proxy (IMPORTANT)
@@ -62,7 +66,7 @@ If that is not the case please complete those earlier. It is also a requirement 
 - Open [dnschecker.org](https://dnschecker.org/).
 - Enter your domain (e.g. `yourdomainname.com`).
 - Check if **A records** and **CNAME records** are showing up correctly.
-- If not, **wait up to 24 hours** for *[DNS Propagation](#what-is-dns-propagation?)*.
+- If not, **wait up to 24 hours** for *[DNS Propagation](#what-is-dns-propagation)*.
 ![DNS Checker view](img/DNSChecker.png)
 
 ### Step 5: Re-enable GitHub Pages HTTPS
@@ -71,7 +75,7 @@ If that is not the case please complete those earlier. It is also a requirement 
 3. **GitHub will issue a SSL certificate** automatically.
 ![Enforce HTTPS](img/enableEnforceHTTPS.png)
 
-## 3. Custom Domain for DigitalOcean Droplet
+## Custom Domain for DigitalOcean Droplet
 Now, I want the domain name to point at the DigitalOcean Droplet that I created to serve a static website as well in this [project](../static-site-server).
 
 To do that, DNS records must be changed to point at the DigitalOcean Droplet public IP address.
@@ -94,7 +98,7 @@ To do that, DNS records must be changed to point at the DigitalOcean Droplet pub
     - **Type**: `A`
     - **Name**: `@`
     - **Value (IP address)**: *Your Cloudflare Droplet's IP (e.g., `192.168.1.100`)*
-    - **Proxy Status**: Set to be "Proxied" (Orange Cloud :cloud:) to use [Cloudflare's CDN](#what-role-does-the-content-delivery-network-(cdn)-play-as-a-proxy-in-cloudflare-dns?) and security features.
+    - **Proxy Status**: Set to be "Proxied" (Orange Cloud :cloud:) to use [Cloudflare's CDN](#what-role-does-the-content-delivery-network-cdn-play-as-a-proxy-in-cloudflare-dns) and security features.
 
 ### Step 3: Configure DNS CNAME-type records in Cloudflare
 This is only required if you want to use `www.yourdomainname.com` (not only `yourdomainname.com`).
@@ -129,7 +133,7 @@ To still use GitHub Pages to serve the static website, we can host it in a subdo
 
 ![Final DNS register setup](img/DNSregisterFinalSetup.png)
 
-## 4. Links to static websites
+## Links to static websites
 Please find both static websites in the following links:
 | Server                | Link  |
 |-----------------------|-------|
@@ -140,7 +144,7 @@ Screenshots of the website content:
 ![GitHub Pages static website](img/gh-static-site.png)
 ![DigitalOcean Droplet static website](img/droplet-static-site.png)
 
-## 5. Brief concepts about DNS
+## Brief concepts about DNS
 The **Domain Name System (DNS)** is like the **phonebook of the internet** —it translates human-readable domain names (e.g., `yourdomainname.com`) into machine-readable IP addresses (e.g., `185.199.108.153` for GitHub Pages).
 
 ### How does DNS work? (summary of [this comic](https://howdns.works/))
@@ -221,8 +225,11 @@ When **Cloudflare’s proxy (orange cloud :cloud:) is enabled on a DNS record**,
 
 #### :white_check_mark: Benefits of using Cloudflare's proxy
 :heavy_check_mark: Faster website loading times (due to caching and global CDN network).
+
 :heavy_check_mark: Reduced bandwidth usage (static files served from Cloudflare instead of your server).
+
 :heavy_check_mark: Improved security (DDoS protection, Web Application Firewall).
+
 :heavy_check_mark: Always online (Cloudflare can serve cached pages even if your origin server is down).
 
 #### :warning: When not to use Cloudflare's proxy?
