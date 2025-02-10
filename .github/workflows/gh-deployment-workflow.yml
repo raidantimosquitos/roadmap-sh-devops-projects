@@ -24,7 +24,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "$DEPLOY_DIR"
-          path: '${{ github.workspace }}/projects/beginner/gh-deployment-workflow/"$DEPLOY_DIR"'
+          path: ${{ github.workspace }}/projects/beginner/gh-deployment-workflow/$DEPLOY_DIR
 
       - name: Checkout gh-deployment-workflow branch
         uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: "$DEPLOY_DIR"
-          path: "$DEPLOY_DIR"
+          path: $DEPLOY_DIR
 
       - name: Commit and push changes
         run: |
