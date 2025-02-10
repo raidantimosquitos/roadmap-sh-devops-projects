@@ -170,8 +170,8 @@ jobs:
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
-        name: "$DEPLOY_DIR"
-        path: "$DEPLOY_DIR"
+        name: ${{ env.DEPLOY_DIR }}
+        path: ${{ env.DEPLOY_DIR }}
 
     # ...
 ```
