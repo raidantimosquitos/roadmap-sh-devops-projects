@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  DEPLOY_DIR: hello-github-actions
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -20,8 +23,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: hello-github-actions
-          path: ${{ github.workspace }}/projects/beginner/gh-deployment-workflow/hello-github-actions
+          name: "$DEPLOY_DIR"
+          path: '${{ github.workspace }}/projects/beginner/gh-deployment-workflow/"$DEPLOY_DIR"'
 
       - name: Checkout gh-deployment-workflow
         uses: actions/checkout@v4
@@ -30,15 +33,14 @@ jobs:
 
       - name: Clear site files and re-create directory
         run: |
-          DIR="hello-github-actions"
-          git rm -rf $DIR
-          mkdir -p "$DIR"
+          git rm -rf "$DEPLOY_DIR"
+          mkdir -p "$DEPLOY_DIR"
 
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: hello-github-actions
-          path: hello-github-actions
+          name: "$DEPLOY_DIR"
+          path: "$DEPLOY_DIR"
 
       - name: Commit and push changes
         run: |

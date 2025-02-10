@@ -157,21 +157,20 @@ jobs:
 
     - name: Clear site files and re-create directory
       run: |
-        DIR="hello-github-actions"
-        git rm -rf $DIR
-        mkdir -p "$DIR"
+        git rm -rf "$DEPLOY_DIR"
+        mkdir -p "$DEPLOY_DIR"
 
     - name: Add CNAME file (if it does not exist)
       run: |
-        FILENAME="CNAME"
+        FILENAME="$DEPLOY_DIR/CNAME"
         if [ ! -f "$FILENAME" ]; then
           echo "gh.yourdomainname.com" > "$FILENAME"
 
     - name: Download artifact
       uses: actions/download-artifact@v4
       with:
-        name: hello-github-actions
-        path: hello-github-actions
+        name: "$DEPLOY_DIR"
+        path: "$DEPLOY_DIR"
 
     # ...
 ```
