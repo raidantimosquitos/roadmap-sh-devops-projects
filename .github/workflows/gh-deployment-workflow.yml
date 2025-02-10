@@ -41,6 +41,7 @@ jobs:
           FILENAME="$DEPLOY_DIR/CNAME"
           if [ ! -f "$FILENAME" ]; then
             echo "gh.testsraidantimosquitos.win" > "$FILENAME"
+          fi
 
       - name: Download artifact
         uses: actions/download-artifact@v4

@@ -165,6 +165,7 @@ jobs:
         FILENAME="$DEPLOY_DIR/CNAME"
         if [ ! -f "$FILENAME" ]; then
           echo "gh.yourdomainname.com" > "$FILENAME"
+        fi
 
     - name: Download artifact
       uses: actions/download-artifact@v4
