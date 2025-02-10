@@ -28,16 +28,17 @@ jobs:
         with:
           ref: gh-deployment-workflow
 
-      - name: Clear branch, check if download directory exists and create if needed
+      - name: Clear site files and re-create directory
         run: |
-          git rm -rf .
           DIR="hello-github-actions"
-          if [ ! -d "$DIR" ]; then
-            echo "Directory does not exist. Creating $DIR..."
-            mkdir -p "$DIR"
-          else
-            echo "Directory exists. Downloading into $DIR..."
-          fi
+          git rm -rf $DIR
+          mkdir -p "$DIR"
+
+      - name: Add CNAME file
+        run: |
+          FILENAME="CNAME"
+          if [ ! -d "$FILENAME"]; then
+            echo "gh.testsraidantimosquitos.win" > FILENAME
 
       - name: Download artifact
         uses: actions/download-artifact@v4

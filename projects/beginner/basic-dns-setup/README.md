@@ -9,10 +9,16 @@ The goal of this project is to learn and practice the basics of DNS. This is my 
 4. [Links to static websites](#links-to-static-websites)
 5. [Brief concepts about DNS](#brief-concepts-about-dns)
 
+--------------------------------------------------------
+--------------------------------------------------------
+
 ## Requirements
 This project assumes that you already completed the previous two projects: [GitHub Pages Deployment](../gh-deployment-workflow) and [Static Site Server](../static-site-server).
 
 If that is not the case please complete those earlier. It is also a requirement to have a domain name, you can purchase one in Cloudflare, GoDaddy, Namecheap, etc. This tutorial will guide you through the steps to configure in Cloudflare, but GUI are considerably similar so you should be able to follow if using a different domain provider.
+
+-------------------------------------------------------
+-------------------------------------------------------
 
 ## Custom Domain for GitHub Pages
 ### **Step 1**: Add your domain to GitHub pages
@@ -75,6 +81,9 @@ If that is not the case please complete those earlier. It is also a requirement 
 3. **GitHub will issue a SSL certificate** automatically.
 ![Enforce HTTPS](img/enableEnforceHTTPS.png)
 
+-------------------------------------------------
+-------------------------------------------------
+
 ## Custom Domain for DigitalOcean Droplet
 Now, I want the domain name to point at the DigitalOcean Droplet that I created to serve a static website as well in this [project](../static-site-server).
 
@@ -118,6 +127,8 @@ This is only required if you want to use `www.yourdomainname.com` (not only `you
 > GitHub Pages will no longer serve the website (unless using a different subdomain for it).
 > Cloudflare will route traffic through its CDN, offering caching, security, and performance improvements.
 
+----------------------------------------------------
+
 ### ALTERNATIVE: Use a subdomain for GitHub pages
 To still use GitHub Pages to serve the static website, we can host it in a subdomain. For example:
 - **Main website** (`yourdomainname.com`) &rarr; Hosted on DigitalOcean Droplet.
@@ -132,6 +143,39 @@ To still use GitHub Pages to serve the static website, we can host it in a subdo
 2. In GitHub Pages settings, change the custom domain to `gh.yourdomainname.com`
 
 ![Final DNS register setup](img/DNSregisterFinalSetup.png)
+
+#### Update GitHub Actions `deploy.yml` script to automatically link the static website hosted in GitHub Pages to the domain name.
+
+To further enhance CI/CD workflow, it is convenient to update the `deploy.yml` script (stored in `.github/workflows/`) presented in the [GitHub Pages Deployment Workflow](../gh-deployment-workflow) project. The CNAME file job must be added, between the static website directory creation and the downloading of the artifact.
+```yaml
+# ...
+jobs:
+  deploy:
+  runs-on: ubuntu-latest
+  steps:
+    # ...
+
+    - name: Clear site files and re-create directory
+      run: |
+        DIR="hello-github-actions"
+        git rm -rf $DIR
+        mkdir -p "$DIR"
+
+    - name: Add CNAME file (if it does not exist)
+      run: |
+        FILENAME="CNAME"
+        if [ ! -d "$FILENAME" ]; then
+          echo "gh.yourdomainname.com" > FILENAME
+
+    - name: Download artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: hello-github-actions
+        path: hello-github-actions
+
+    # ...
+```
+This will ensure that the domain name linked to the static website hosted by GitHub Pages servers remains configured in every new push of changes.
 
 ## Links to static websites
 Please find both static websites in the following links:
