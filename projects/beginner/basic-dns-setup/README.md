@@ -165,7 +165,7 @@ jobs:
       run: |
         FILENAME="CNAME"
         if [ ! -d "$FILENAME" ]; then
-          echo "gh.yourdomainname.com" > FILENAME
+          echo "gh.yourdomainname.com" > "$FILENAME"
 
     - name: Download artifact
       uses: actions/download-artifact@v4
