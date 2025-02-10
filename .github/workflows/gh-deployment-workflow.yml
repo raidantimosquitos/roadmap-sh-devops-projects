@@ -37,8 +37,8 @@ jobs:
       - name: Add CNAME file
         run: |
           FILENAME="CNAME"
-          if [ ! -d "$FILENAME"]; then
-            echo "gh.testsraidantimosquitos.win" > FILENAME
+          if [ ! -d "$FILENAME" ]; then
+            echo "gh.testsraidantimosquitos.win" > "$FILENAME"
 
       - name: Download artifact
         uses: actions/download-artifact@v4
