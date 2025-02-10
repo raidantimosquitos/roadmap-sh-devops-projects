@@ -164,7 +164,7 @@ jobs:
     - name: Add CNAME file (if it does not exist)
       run: |
         FILENAME="CNAME"
-        if [ ! -d "$FILENAME" ]; then
+        if [ ! -f "$FILENAME" ]; then
           echo "gh.yourdomainname.com" > "$FILENAME"
 
     - name: Download artifact
